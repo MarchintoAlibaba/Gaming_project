@@ -1,0 +1,10 @@
+亚洲电竞账号1：kaixinliao
+	密码：aaa111
+亚洲电竞账号2：djtz123
+	密码：aaa111
+接口文档地址：http://10.10.11.53/swagger/index.html
+bug地址：http://10.10.10.29:8080/projects/DIANJING/issues/DIANJING-61?filter=allissues
+后台管理地址：http://10.10.11.52:8888/ 账号：stone 密码：123456
+
+目前z-index：1
+最高的弹出框：z-index：10

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+<style type="text/css">
+	.zhibo-1{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 16;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke 6s  ease-in-out forwards infinite;
+	}
+	.zhibo-2{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 16;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke1 6s  ease-in-out forwards infinite;
+	}
+	.zhibo-3{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 16;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke2 6s  ease-in-out forwards infinite;
+	}
+	.st1{
+		fill:url(#SVGID_2_);
+		animation: moive 6s  ease-in-out forwards infinite;  
+	}
+	 @keyframes stroke {
+		80% {
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 100 150;
+		}
+		100% {
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 100 150;
+		}
+	}
+	@keyframes stroke1 {
+		80%{
+			stroke-dashoffset: 1100;
+			stroke-dasharray: 100 150;
+		}
+		100%{
+			stroke-dashoffset: 1100;
+			stroke-dasharray: 100 150;
+		}
+	}
+	 @keyframes stroke2 {
+		80% {
+		stroke-dashoffset: 1200;
+		stroke-dasharray: 100 150;
+		}
+		100% {
+		stroke-dashoffset: 1200;
+		stroke-dasharray: 100 150;
+		}
+	}
+	@keyframes moive {
+		0%{fill:#c39902;} 
+		50%{fill:#07f1b6;}
+		100%{fill:#3cc0fe;}
+	}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="267.3907" y1="394.8458" x2="507.5" y2="394.8458">
+	<stop  offset="0" style="stop-color:#07F1B6"/>
+	<stop  offset="1" style="stop-color:#3CC0FE"/>
+</linearGradient>
+<symbol id="s-text">
+	<path id="s-text" class="st0" d="M267.4,537.8l2.4-286l237.7,146.1L267.4,537.8z M301.4,303.8l-2.2,180.7l152.7-89L301.4,303.8z M295.3,296.3"/>
+</symbol> 
+<use xlink:href="#s-text" class="zhibo-1"></use>
+<use xlink:href="#s-text" class="zhibo-2"></use>
+<use xlink:href="#s-text" class="zhibo-3"></use>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="61.003" y1="339.5" x2="638.997" y2="339.5">
+	<stop  offset="0" style="stop-color:#07F1B6"/>
+	<stop  offset="1" style="stop-color:#3CC0FE"/>
+</linearGradient>
+<path class="st1" d="M589.3,156h-67.7l93-93h-45.3l-93,93l-252.7,0l-93-93H85.4l93,93h-67.7C78.8,156,53,181.8,53,213.7v344.7
+	c0,31.8,25.8,57.7,57.7,57.7l478.7,0c31.8,0,57.7-25.8,57.7-57.7V213.7C647,181.8,621.2,156,589.3,156z M615,546.3
+	c0,20.8-16.9,37.7-37.7,37.7H122.7c-20.8,0-37.7-16.9-37.7-37.7V225.7c0-20.8,16.9-37.7,37.7-37.7h454.7c20.8,0,37.7,16.9,37.7,37.7
+	V546.3z"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+<style type="text/css">
+	.zhibo-1{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 48;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke 4s  ease-in-out forwards infinite;
+        animation-direction: alternate;
+	}
+	.zhibo-2{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 48;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke1 4s  ease-in-out forwards infinite;
+        animation-direction: alternate;
+	}
+	.zhibo-3{
+		fill:none;
+		stroke:url(#SVGID_1_);
+		stroke-width: 48;
+		stroke-dasharray: 0 300;
+        stroke-dashoffset: 0;
+		animation: stroke2 4s  ease-in-out forwards infinite;
+        animation-direction: alternate;
+	}
+	 @keyframes stroke {
+		90% {
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 100 150;
+		}
+		100% {
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 100 150;
+		}
+	}
+	@keyframes stroke1 {
+		90%{
+			stroke-dashoffset: 1100;
+			stroke-dasharray: 100 150;
+		}
+		100%{
+			stroke-dashoffset: 1100;
+			stroke-dasharray: 100 150;
+		}
+	}
+	 @keyframes stroke2 {
+		90% {
+		stroke-dashoffset: 1200;
+		stroke-dasharray: 100 150;
+		}
+		100% {
+		stroke-dashoffset: 1200;
+		stroke-dasharray: 100 150;
+		}
+	}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="170.5396" y1="350.0002" x2="629.9268" y2="350.0002">
+	<stop  offset="0" style="stop-color:#07F1B6"/>
+	<stop  offset="1" style="stop-color:#3CC0FE"/>
+</linearGradient>
+<symbol id="s-text">
+	<path class="st0" d="M170.5,615.2V84.8L629.9,350L170.5,615.2z M240.5,206v288l249.4-144L240.5,206z"/>
+</symbol> 
+<use xlink:href="#s-text" class="zhibo-1"></use>
+<use xlink:href="#s-text" class="zhibo-2"></use>
+<use xlink:href="#s-text" class="zhibo-3"></use>
+</svg>
