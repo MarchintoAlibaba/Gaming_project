@@ -1,0 +1,12 @@
+//存储mutations相关的一些常量
+export const SET_USERINFO = 'SET_USERINFO'
+export const ODDS_CHANGE = 'ODDS_CHANGE'
+export const GAME_CHANGE = 'GAME_CHANGE'
+export const PLAY_CHANGE = 'PLAY_CHANGE'
+export const BETMODULE = 'BETMODULE'
+export const GAME_TITLE = 'GAME_TITLE'
+export const BETTINGMODULEL = 'BETTINGMODULEL'
+export const NEWSSEARCH = 'NEWSSEARCH'
+export const SORTLISTCOUNT = 'SORTLISTCOUNT'
+export const GAMESORTLIST = 'GAMESORTLIST'
+export const AGENTINFO = 'AGENTINFO'

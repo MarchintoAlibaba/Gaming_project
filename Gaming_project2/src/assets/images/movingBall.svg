@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-70 -70 710 710">
+    <defs>
+        <style>
+            .cls-1{fill:url(#colorMain);}
+            .cls-2{fill:url(#colorMain-2);}
+            .cls-3{fill:url(#colorMain-3);}
+            .cls-4{fill:none;stroke-miterlimit:10;stroke-width:32px;stroke:url(#colorMain-4);}
+            .cls-5{fill:url(#colorMain-5);}
+            @keyframes nei{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+            }
+            @keyframes nei1{
+                0%{transform: rotate(0deg);}
+                25%{transform: rotate(0deg);}
+                100%{transform: rotate(-360deg); }
+            }
+            #g-1{
+                transform-origin: 287.153px 287.153px;
+                animation:nei 3s;
+                animation-iteration-count:infinite;
+            }
+            #weixing-1{
+                transform-origin: 287.153px 287.153px;
+                animation:nei1 4s;
+                animation-iteration-count:infinite;
+            }
+            #lujing-1{
+                transform-origin: 287.153px 287.153px;
+                animation:nei 4s;
+                animation-iteration-count:infinite;
+            }
+        </style>
+        <linearGradient id="colorMain" x1="341.59" y1="104.8" x2="64.25" y2="423.03" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#07f1b6"/>
+            <stop offset="1" stop-color="#3cc0fe"/>
+        </linearGradient>
+        <linearGradient id="colorMain-2" x1="373.56" y1="132.67" x2="96.23" y2="450.89" gradientTransform="translate(304.37 -21.78) rotate(45)" xlink:href="#colorMain"/>
+        <linearGradient id="colorMain-3" x1="499.07" y1="242.05" x2="221.73" y2="560.27" xlink:href="#colorMain"/>
+        <linearGradient id="colorMain-4" x1="0" y1="288.89" x2="577.78" y2="288.89" xlink:href="#colorMain"/>
+        <linearGradient id="colorMain-5" x1="460.79" y1="119.94" x2="575.95" y2="119.94" xlink:href="#colorMain"/>
+        <linearGradient id="colorMain-6" x1="1203.1" y1="-110.97" x2="728.44" y2="827.7" xlink:href="#colorMain" />
+        <linearGradient id="colorMain-7" x1="1564.11" y1="71.58" x2="1089.44" y2="1010.25" xlink:href="#colorMain" />
+        <linearGradient id="colorMain-8" x1="1934.18" y1="258.72" x2="1459.51" y2="1197.39" xlink:href="#colorMain" />
+    </defs>
+    <title>滚球中</title>
+    <g id="g-1">
+        <circle id="yuan-1" class="cls-1" cx="288.89" cy="165.27" r="84"/>
+        <circle id="yuan-2" class="cls-2" cx="178.47" cy="356.52" r="84" />
+        <circle id="yuan-3" class="cls-3" cx="399.31" cy="356.52" r="84"/>
+    </g>
+    <circle id="lujing-1" class="cls-4" cx="288.89" cy="288.89" r="280.89"/>
+    <circle id="weixing-1" class="cls-5" cx="518.37" cy="119.94" r="84"/>
+</svg>
