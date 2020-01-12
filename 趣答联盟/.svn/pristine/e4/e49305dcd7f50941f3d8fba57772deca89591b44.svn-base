@@ -1,0 +1,60 @@
+<scroll-view scroll-y>
+  <view class="top">
+    <image class="top_bg" src="../../static/addition/banner_1.png"></image>
+  </view>
+  <view style="background:#fff;">
+    <button bindtap="to_rule">
+      <image class="rule" src="../../static/addition/btn_gz.png"></image>
+    </button>
+    <view class="friend_container" style="padding-top:80rpx">
+      <view class="friend_num" bindtap="show_box">
+        <view class="friend_1">
+          <image class="friend_icon" src="../../static/addition/icon_1.png"></image>
+          <view>{{fnum}}</view>
+        </view>
+        <view>已邀请好友</view>
+      </view>
+      <view class="friend_gold">
+        <view class="friend_1">
+          <image class="gold" src="../../static/gold.png"></image>
+          <view>{{fgold}}</view>
+        </view>
+        <view>好友累计贡献金币</view>
+      </view>
+    </view>
+    <button open-type="share" class="share">
+      <image class="btn_bg" src="../../static/addition/btn_1.png"></image>
+      <view class="Invitation">邀请好友</view>
+    </button>
+    <view class="friend_money">好友们已帮我赚了{{fgold / 10000}}元</view>
+  </view>
+  <view style='height:80%;'>
+    <view class="item" wx:for="{{frecords}}">
+      <view class="item_left">
+        <image class="gold" src="../../static/gold.png"></image>
+        <view class="gold_num" style="color:#999;margin:0 10rpx 0 5rpx">+{{item.num}}</view>
+        <image class="face" src="{{item.avatarUrl}}"></image>
+        <view class="name">{{item.nickname}}</view>
+        <view class="way">{{item.typename}}</view>
+      </view>
+      <view class="time">{{item.userid}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="box" wx:if="{{show_box}}">
+  <view class="box_container">
+    <image class="box_bg" src="../../static/addition/bg_tc1.png"></image>
+    <view class="box_main">
+      <view class="main_top">已邀请好友 {{fnum}} 人</view>
+      <scroll-view scroll-y class="scroll">
+        <view class="scroll_item" wx:for="{{friends}}">
+          <image class="box_face" src="{{item.avatarUrl}}"></image>
+          <view class="box_name">{{item.nickName}}</view>
+          <view class="box_item_right">贡献
+            <text>{{item.sumgold}}</text> 金币</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <image class="close" src="../../static/addition/icon_gb.png" bindtap="close_box"></image>
+</view>

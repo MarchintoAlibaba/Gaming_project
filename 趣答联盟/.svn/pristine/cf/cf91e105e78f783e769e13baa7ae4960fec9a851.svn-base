@@ -1,0 +1,54 @@
+<view class="main">
+  <view class="zfb">
+    <view class="zfb_name_container" style=" margin-bottom: 20rpx;">
+      <view class="zfb_name">支付宝账号</view>
+      <input class="name" placeholder="请谨慎填写您的提现支付宝账号" placeholder-class="placeholder" bindinput="alipayInput" value='{{alipay}}'/>
+      <view class="tips">必填</view>
+    </view>
+    <view class="zfb_name_container">
+      <view class="zfb_name">支付宝姓名</view>
+      <input class="name" placeholder="请谨慎填写您的提现支付宝姓名" placeholder-class="placeholder" bindinput="alipaynameInput" value='{{alipayname}}'/>
+      <view class="tips">必填</view>
+    </view>
+  </view>
+  <view class="zfb">
+    <view class="zfb_name_container" style=" margin-bottom: 20rpx;">
+      <view class="zfb_name">职业</view>
+      <view class="age">
+        <picker bindchange="bindPickerChange" value="{{work}}" range="{{selectData}}" style='width:100%;color:#000;'>
+          <view class="picker">
+            {{selectData[work]}}
+          </view>
+        </picker>
+      </view>
+      <view class="tips">必填</view>
+    </view>
+    <view class="zfb_name_container">
+      <view class="zfb_name">年龄</view>
+      <view class="age">
+        <picker bindchange="bindPickerChange2" value="{{age}}" range="{{selectData2}}" style='width:100%;color:#000;'>
+          <view class="picker">
+            {{selectData2[age]}}
+          </view>
+        </picker>
+      </view>
+      <view class="tips">必填</view>
+    </view>
+  </view>
+  <view class="zfb" style="border:0">
+    <view class="zfb_name_container" style=" margin-bottom: 20rpx;">
+      <view class="zfb_name">微信号</view>
+      <input class="name" placeholder="您的实名微信号" placeholder-class="placeholder" bindinput="wxInput" value='{{wx}}'/>
+      <view class="tips1">选填</view>
+    </view>
+    <view class="zfb_name_container">
+      <view class="zfb_name">QQ号</view>
+      <input class="name" placeholder="您的QQ号码" placeholder-class="placeholder" bindinput="qqInput" value='{{qq}}'/>
+      <view class="tips1">选填</view>
+    </view>
+  </view>
+  <view class="btn" bindtap="savecash">
+    <image class="btn_bg" src="../../../static/my/btn_di.png"></image>
+    <view class="btn_zh">提交修改</view>
+  </view>
+</view>

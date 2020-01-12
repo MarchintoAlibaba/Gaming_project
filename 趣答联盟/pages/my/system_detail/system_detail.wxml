@@ -1,0 +1,9 @@
+<view class="detail_item" style="border-bottom:1rpx solid #eeeeee" wx:if="{{records.length > 0}}" wx:for="{{records}}">
+  <view class="item_eft">
+    <view class="item_title">{{item.title}}</view>
+    <view class="item_time">{{item.userid}}</view>
+  </view>
+</view>
+<view style='font-size:32rpx;text-align:center;margin-top:10rpx;' wx:if="{{records.length == 0}}">
+  暂无消息!
+</view>

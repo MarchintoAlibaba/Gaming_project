@@ -1,0 +1,54 @@
+.top{
+  margin-top: 50rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.three_id{
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.id_container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.item{
+  margin: 20rpx;
+}
+.id_img{
+  width: 135rpx;
+  height: 135rpx;
+}
+.item_zh{
+  font-size: 25rpx;
+  color: #666;
+}
+.btn{
+  width: 350rpx;
+  margin-left: 200rpx;
+  height: 75rpx;
+  position: relative;
+  margin-top: 100rpx;
+}
+.btn_img{
+  width: 100%;
+  height: 100%;
+}
+.btn_zh{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #fff;
+}

@@ -1,0 +1,59 @@
+<view class="top">
+  <image class="top_bg" src="../../../static/my/bg_baishdi.png"></image>
+  <view class="info">
+    <view style=" display: flex;justify-content: space-between;align-items: center;">
+      <view class="info_face">
+        <image class="face" src="{{avatarUrl}}"></image>
+        <image class="vip_icon" src="{{'../../../static/my/vip' + integral + '.png'}}"></image>
+      </view>
+      <view class="vip_container" style="margin-right:40rpx;">
+        <view class="vip_top">
+          <view class="name">{{nickName}}</view>
+        </view>
+        <view class="vip_center">
+          <image class="vip_base" src="../../../static/my/ht_1.png"></image>
+          <image class="vip_length" style='width:{{num}}%' src="../../../static/my/ht_2.png"></image>
+        </view>
+        <view class="vip_num">经验值：{{exp}}/{{sumexp}}</view>
+      </view>
+    </view>
+    <view class="share" bindtap="to_OR_code">
+      <image class="QR_code" src="../../../static/my/bg_fxzq.png"></image>
+      <image class="QR_code_icon" src="../../../static/my/icon__0003_4.png"></image>
+    </view>
+  </view>
+</view>
+<view class="title">第一赛季</view>
+<view class="time">赛季未开始</view>
+<view class="main">
+  <view class="main_container">
+    <view class="item">
+      <view class="item-left">参与比赛</view>
+      <view class="item-left">无</view>
+    </view>
+    <view class="item">
+      <view class="item-left">累计奖金</view>
+      <view class="item-left">无</view>
+    </view>
+    <view class="item">
+      <view class="item-left">正确率</view>
+      <view class="item-left">无</view>
+    </view>
+  </view>
+</view>
+<view class="main">
+  <view class="main_container">
+    <view class="item1_top">
+      <view>历史赛季</view>
+      <view>参与比赛</view>
+      <view>累计奖金/元</view>
+      <view>正确率</view>
+    </view>
+    <view class="item1_desc">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,120 @@
+page{
+  background: #f6f6f6
+}
+page{
+  height: 90%;
+}
+scroll-view{
+  height: 100%;
+  overflow: auto
+}
+top{
+  height: 260rpx;
+}
+.top_bg{
+  width: 100%;
+  height: 100%
+}
+.top_two{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9e9e9;
+  font-size: 22rpx;
+  width: 94%;
+  padding: 10rpx 3%;
+}
+.top_two_left{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.gold{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 5rpx;
+}
+.time{
+  font-weight: bold;
+  color: #6b03fd
+}
+.welfare_top{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+  margin: 20rpx 5%;
+  font-size: 24rpx;
+  color: #7500fd;
+}
+.welfare_title_left{
+  width: 4rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.sign_contianer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 20rpx 5%;
+  background: #fff;
+}
+.sign_icon{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx
+}
+.exp_icon{
+  width: 70rpx;
+  height: 30rpx;
+  margin: 0 5rpx;
+}
+.to_sign_bg{
+  width: 160rpx;
+  height: 70rpx;
+}
+.desc_top{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 22rpx;
+  margin-bottom: 20rpx
+}
+.sign_day{
+  font-size: 26rpx;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 3rpx
+}
+.to_sign{
+  margin-left: 50rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign{
+  width: 160rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+}
+.box1{
+  width: 82rpx;
+  height: 71rpx;
+  margin-bottom: 5rpx;
+}
+.box2{
+  width: 87rpx;
+  height: 83rpx;
+}
+.click_get{
+  font-size: 22rpx;
+}

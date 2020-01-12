@@ -1,0 +1,29 @@
+<image class="top" src="../../../static/index/hb_di1.png"></image>
+<image class="desc_bg" src="../../../static/index/hb_di2.png"></image>
+<view class="desc_container">
+  <view class="hb_is_what">
+    <view class="hb_title">什么是金币？</view>
+    <view class="hn_desc1">金币是由趣答联盟推出的奖励货币，为鼓励大家每日签到、体验小程序、邀请好友等都可以获得对应数额的金币奖励。金币可直接在趣答联盟小程序中直接兑换现金提现。
+    </view>
+  </view>
+  <view class="hb_is_what">
+    <view class="hb_title">什么是红包？</view>
+    <view class="hn_desc1">红包是由趣答联盟推出的答题奖励，为鼓励大家每日答题，通过答题获取知识和乐趣，每天答题都可以获得对应数额的红包奖励。红包可直接在趣答联盟小程序中直接兑换现金提现。答题获得的红包会在答题结束时直接增加至您的账户。
+    </view>
+  </view>
+  <view class="how_get">
+    <view class="hb_title">如何获得红包？</view>
+    <view class="way">答题奖励</view>
+    <view class="hn_desc1">每天通过加入答题房间进行答题都可获得红包。答题排名越高可获得的红包奖励数量越多。答题结束后红包将直接加至您的账户。
+    </view>
+    <view class="way">好友收益</view>
+    <view class="hn_desc1" style="margin:10rpx 5%">a、邀请好友一起来趣答联盟完成体验小程序任务，即可获得您邀请的好友收益。您邀请的好友完成的体验小程序任务越多，您所获得好友贡献的金币收益越多。（与好友多多沟通完成任务，更容易获得此收益！）
+    </view>
+    <view class="hn_desc1" style="margin:10rpx 5%">
+      b、邀请好友一起来趣答联盟答题，好友每次答题结束后，您可获得您邀请的好友的部分收益。以金币体现。
+    </view>
+    <view class="hn_desc1" style="margin:10rpx 5%">
+      c、如果您有好友收益时，收益出现在首页好友收益悬浮红包，点击领取！将会增加至您的账户。
+    </view>
+  </view>
+</view>

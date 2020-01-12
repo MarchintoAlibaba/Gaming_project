@@ -1,0 +1,92 @@
+<scroll-view scroll-y>
+  <view class="top">
+    <image class="top_bg" src="../../static/play/banner_1.png" mode="widthFix"></image>
+  </view>
+  <view class="top_two">
+    <view class="top_two_left">
+      <view>今日体验全部小程序，再拿额外奖励</view>
+      <image class="gold" src="../../static/gold.png"></image>
+      <view class="gold_num" style="color:#ff5454">{{playgold}}</view>
+      <view> 金币</view>
+    </view>
+    <view class="time">{{timetext}}</view>
+  </view>
+  <view class="welfare_container">
+    <view class="welfare_top">
+      <image class="welfare_title_left" src="../../static/play/icon_xian.png"></image>
+      <view class="title">签到福利</view>
+    </view>
+    <view class="sign_contianer" wx:for="{{signs}}">
+      <view style="display: flex;  align-items: center;">
+        <image class="sign_icon" src="{{item.Img}}"></image>
+        <view class="sign_desc">
+          <view class="desc_top">
+            <view class="sign_day">{{item.Name}}</view>
+            <image class="gold" wx:if="{{item.type == 1}}" src="../../static/gold.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 2}}" src="../../static/play/icon_exp.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 3}}" src="../../static/play/icon_exp.png"></image>
+            <view style="color:#cf3c36">+{{item.num}}</view>
+          </view>
+          <text class="sian_down" style="font-size:24rpx;color:#666">{{item.Content}}</text>
+        </view>
+      </view>
+      <button bindtap="to_sign_in">
+        <view class="to_sign">
+          <image class="to_sign_bg" src="../../static/play/btn_di2.png"></image>
+          <view class="sign">去签到</view>
+        </view>
+      </button>
+    </view>
+    <view class="welfare_top">
+      <image class="welfare_title_left" src="../../static/play/icon_xian.png"></image>
+      <view class="title">VIP限时福利</view>
+    </view>
+    <view class="sign_contianer" wx:for="{{vips}}">
+      <view style="display: flex;  align-items: center;">
+        <image class="sign_icon" src="{{item.Img}}"></image>
+        <view class="sign_desc">
+          <view class="desc_top">
+            <view class="sign_day">{{item.Name}}</view>
+            <image class="gold" wx:if="{{item.type == 1}}" src="../../static/gold.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 2}}" src="../../static/play/icon_exp.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 3}}" src="../../static/play/icon_exp.png"></image>
+            <view style="color:#cf3c36">+{{item.num}}</view>
+          </view>
+          <text class="sian_down" style="font-size:24rpx;color:#666">{{item.Content}}</text>
+        </view>
+      </view>
+      <button open-type="share">
+        <view class="to_sign">
+          <image class="to_sign_bg" src="../../static/play/btn_di2.png"></image>
+          <view class="sign">去邀请</view>
+        </view>
+      </button>
+    </view>
+    <view class="welfare_top">
+      <image class="welfare_title_left" src="../../static/play/icon_xian.png"></image>
+      <view class="title">小程序体验福利</view>
+    </view>
+    <view class="sign_contianer" style="margin-bottom:2rpx" wx:for="{{exps}}">
+      <view style="display: flex;  align-items: center;" bindtap="to_app" data-id="{{item.AppID}}">
+        <image class="sign_icon" src="{{item.Img}}"></image>
+        <view class="sign_desc">
+          <view class="desc_top" style='margin-bottom:0rpx;'>
+            <view class="sign_day">{{item.Name}}</view>
+            <image class="gold" wx:if="{{item.type == 1 || item.type == 0}}" src="../../static/gold.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 2}}" src="../../static/play/icon_exp.png"></image>
+            <image class="exp_icon" wx:if="{{item.type == 3}}" src="../../static/play/icon_exp.png"></image>
+            <view style="color:#cf3c36">+{{item.num}}</view>
+          </view>
+          <text class="sian_down" style="font-size:24rpx;color:#666">{{item.Content}}</text>
+        </view>
+      </view>
+      <view class="to_sign" wx:if="{{item.type == 0}}" bindtap="to_tiyan" data-guid="{{item.NewsId}}" data-id="{{item.AppID}}">
+        <image class="box1" src="../../static/play/icon_bx1.png"></image>
+        <view class="click_get">点击领取</view>
+      </view>
+      <view class="to_sign" wx:if="{{item.type == 1}}">
+        <image class="box2" src="../../static/play/icon_bx2.png"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>

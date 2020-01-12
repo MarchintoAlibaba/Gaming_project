@@ -1,0 +1,183 @@
+.content{
+  position:relative
+}
+.help_img{
+  width:100%;
+  display:block;
+  height:420rpx;
+}
+.nav-content{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.all-content{
+  margin-top:6%;
+  text-align:center;
+}
+.logo{
+  width:284rpx;
+  height:62rpx;
+}
+.title{
+  font-size:70rpx;
+  color:#fff;
+  font-weight:600;
+  background-image:-webkit-linear-gradient(bottom,red,#fd8403,#7552e4); 
+  -webkit-background-clip:text; 
+  -webkit-text-fill-color:transparent;
+}
+.title-money{
+  margin-left:6px;
+  margin-right:6px;
+  font-size: 80rpx;
+  display:inline-block;
+  background-image:-webkit-linear-gradient(bottom,#7552e4,#fff,#7552e4); 
+  -webkit-background-clip:text; 
+  -webkit-text-fill-color:transparent;
+}
+.season-title{
+  display:inline-block;
+  padding:0 20rpx;
+  background:#ba5016;
+  color:#fff;
+  border-radius:10rpx;
+  font-weight:500;
+  margin-top:-20rpx;
+  line-height:60rpx;
+}
+.season-module{
+  margin-top:20rpx;
+  display:inline-block;
+  padding:0 30rpx 10rpx;
+  border:2rpx solid #fff;
+  border-radius:10rpx;
+}
+.special-title{
+  font-size:60rpx;
+  font-weight:600;
+}
+.season-time{
+  margin-top:30rpx;
+  display: inline-block;
+  padding:6rpx 30rpx;
+  background:#f6ded2;
+  border-radius:20rpx;
+  color:#48220d;
+  font-size:27rpx;
+  font-weight:600;
+}
+.background-content{
+  height:calc(100vh - 420rpx);
+}
+.activity-content{
+  position:absolute;
+  top:80rpx;
+  left:20rpx;
+  right:20rpx;
+  bottom:20rpx;
+  text-align:center;
+}
+.content-title{
+  position:absolute;
+  top:-68rpx;
+  left:50%;
+  margin-left:-258rpx;
+  width:516rpx;
+  height:108rpx;
+}
+.big-box{
+  background:#fff9e6;
+  border-radius:12rpx;
+  padding:20rpx;
+}
+.activity-box{
+  background:#fff;
+  border-radius:12rpx;
+  padding:16rpx 0 30rpx;
+  border:2rpx dashed gray;
+  text-align: center;
+}
+.ranking-all{
+  text-align: left;
+  display:inline-block;
+}
+.ranking{
+  margin-top:16rpx;
+}
+.ranking view{
+  display: inline-block;
+  color:#c7581b;
+}
+.ranking-box{
+  text-align:right;
+  font-weight:600;
+}
+.ranking-center{
+  min-width:140rpx;
+  text-align:center;
+}
+.btn{
+  text-align:center;
+}
+.btn-friend{
+  margin-top:20rpx;
+  font-size:30rpx;
+  box-shadow:0px 1px 2px #000;
+  color:#fff;
+  border-radius:10rpx;
+  display: inline-block;
+  padding:14rpx 30rpx;
+  background:linear-gradient(to bottom,#6602fe,#cd1ce7);
+}
+.btn-bottom{
+  background:#f18008;
+  box-shadow:none;
+}
+.rules{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,0.6);
+}
+.rulse-box{
+  width:90%;
+  margin-left:5%;
+  margin-top:20%;
+  border-radius:30rpx;
+  overflow:hidden;
+}
+.rulse-top{
+  padding:30rpx 0;
+  text-align:center;
+  color:#fff;
+  font-size:40rpx;
+  font-weight:500;
+  background:#6e3acc;
+  position:relative;
+}
+.rules-title{
+  display: inline-block;
+  font-size:54rpx;
+}
+.rulse-close{
+  width:34rpx;
+  height:34rpx;
+  position:absolute;
+  top:28rpx;
+  right:28rpx;
+}
+.rulse-bottom{
+  background:#fff;
+  padding:20rpx;
+  padding-bottom:40rpx;
+  color:#6e3acc;
+  font-size:28rpx;
+}
+.rulse-bottom view{
+  padding:10rpx 0 14rpx;
+}

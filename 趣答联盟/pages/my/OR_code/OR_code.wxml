@@ -1,0 +1,40 @@
+<view class="main_container">
+  <image class="main" src="../../../static/my/info_QR.png"></image>
+  <image class="my_OR_code" src="{{img}}"></image>
+  <view class="my_info">
+    <image class="my_face" src="{{avatarUrl}}"></image>
+    <view class="my_name">{{nickName}}</view>
+  </view>
+</view>
+<view class="btn_container">
+  <view class="btn_friend">
+    <image class="btn_bg" src="../../../static/my/btn_di.png"></image>
+    <view class="btn_zh" bindtap="show_box">
+      <image class="btn_icon" src="../../../static/my/btn_yq.png"></image>
+      <view>已邀请好友</view>
+    </view>
+  </view>
+  <view class="btn_friend" style="margin-left:50rpx;">
+    <image class="btn_bg" src="../../../static/my/btn_di.png"></image>
+    <view class="btn_zh" bindtap="saveImg">
+      <image class="btn_icon" src="../../../static/my/btn_bc.png"></image>
+      <view>保存到手机</view>
+    </view>
+  </view>
+</view>
+<view class="box" wx:if="{{show_box}}">
+  <view class="box_container">
+    <image class="box_bg" src="../../../static/addition/bg_tc1.png"></image>
+    <view class="box_main">
+      <view class="main_top">已邀请好友 {{fnum}} 人</view>
+      <scroll-view scroll-y class="scroll">
+        <view class="scroll_item" wx:for="{{friends}}">
+          <image class="box_face" src="{{item.avatarUrl}}"></image>
+          <view class="box_name">{{item.nickName}}</view>
+          <view class="box_item_right">贡献 <text>{{item.sumgold}}</text> 金币</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <image class="close" src="../../../static/addition/icon_gb.png" bindtap="close_box"></image>
+</view>

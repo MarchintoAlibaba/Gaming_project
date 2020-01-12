@@ -1,0 +1,35 @@
+<image class="bg" src="../../../static/room/bg_tu1.png"></image>
+<image class="bg_1" src="../../../static/room/bg_di1.png"></image>
+<image class="time" src="../../../static/room/icon_alarm.png"></image>
+<view class="time_num">{{num}}</view>
+<view class="problem_num">{{problem_num}}</view>
+<view class="problem">{{problem}}</view>
+<view class="answer" wx:if="{{show_list < 3}}">
+  <view class="an_item" bindtap="show_list" wx:for="{{Answers}}" bindtap="to_xuan" data-id='{{index}}'>
+    <image class="item_bg" bindtap="to_xuan" wx:if="{{index != xuan && index != answer}}" src="../../../static/room/bg_di2.png"></image>
+    <image class="item_bg" bindtap="to_xuan" wx:if="{{index == xuan && answer == -1}}" src="../../../static/room/bg_di.png"></image>
+    <image class="item_bg" bindtap="to_xuan" wx:if="{{index == answer}}" src="../../../static/room/bg_Correct.png"></image>
+    <image class="item_bg" bindtap="to_xuan" wx:if="{{index == xuan && answer != -1 && index != answer}}" src="../../../static/room/bg_error.png"></image>
+    <view class="item_zh">{{item}}</view>
+    <image class="yes" wx:if="{{index == answer && index == xuan}}" src="../../../static/room/icon_Correct.png"></image>
+    <image class="no" wx:if="{{index == xuan && answer != -1 && index != answer}}" src="../../../static/room/icon_error.png"></image>
+  </view>
+</view>
+<image class="list_bg" wx:if="{{show_list == 3}}" src="../../../static/room/paihangbang.png"></image>
+<view class="list" wx:if="{{show_list == 3}}">
+  <image class="list_di" src="../../../static/room/bg_phdi1.png"></image>
+  <view class="list_container">
+    <view class="list_item" wx:for="{{pai}}">
+      <image class="face" src="{{item.avatarUrl}}"></image>
+      <view class="num">{{index + 1}}</view>
+      <view class="name">{{item.nickName}}</view>
+      <view class="score">{{item.jifen}}分</view>
+    </view>
+    <view class="list_item" style='background-color:deepskyblue;'>
+      <image class="face" src="{{mypai.avatarUrl}}"></image>
+      <view class="num">{{mypai.index + 1}}</view>
+      <view class="name">{{mypai.nickName}}</view>
+      <view class="score">{{mypai.jifen}}分</view>
+    </view>
+  </view>
+</view>

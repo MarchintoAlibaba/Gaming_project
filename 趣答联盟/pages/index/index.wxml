@@ -1,0 +1,248 @@
+<scroll-view scroll-y wx:if="{{islogin}}">
+  <view>
+    <image class="bg" src="../../static/index/bg_di1.png"></image>
+    <view class="top_container">
+      <image class="top_icon" src="../../static/index/icon_horn.png"></image>
+      <swiper class="swiper" autoplay="true" interval="10000" duration="5000" circular="true" style="color:{{zh_color}}">
+        <block wx:for="{{zh_list}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">{{item}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="sign_num">已签到{{signSum}}天</view>
+    <button class="help" bindtap="to_hb_desc">
+      <image class="help_img" src="../../static/index/icon_help.png"></image>
+    </button>
+    <view class="bubble_container">
+      <button bindtap="to_sign_in" class="bg_bubble_container1">
+        <view>
+          <view class="img_container">
+            <image class="bubble1" src="../../static/index/bg_bubble.png" mode="widthFix"></image>
+            <image class="bubbel_zh" src="../../static/index/sign.png"></image>
+          </view>
+          <view>每日签到</view>
+        </view>
+      </button>
+      <view class="bg_bubble_container2" wx:if="{{IsOn}}" bindtap="to_online">
+        <view class="img_container">
+          <image class="bubble1" src="../../static/index/bg_bubble.png" mode="widthFix"></image>
+          <image class="bubbel_zh" src="../../static/index/card.png"></image>
+        </view>
+        <view>{{Online}}</view>
+      </view>
+      <view class="bg_bubble_container3" wx:if="{{isphone && IsB}}" bindtap="to_bx">
+        <view class="img_container">
+          <image class="bubble1" src="../../static/index/bg_bubble.png" mode="widthFix"></image>
+          <image class="bubbel_zh2" src="../../static/index/box.png"></image>
+        </view>
+        <view>幸运宝箱</view>
+      </view>
+      <view class="bg_bubble_container3" wx:if="{{!isphone}}">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+          <view class="img_container">
+            <image class="bubble1" src="../../static/index/bg_bubble.png" mode="widthFix"></image>
+            <view class="bubbel_zh_3">
+              <image class="friend_hb" src="../../static/gold.png"></image>
+              <view class="friend_num">1000</view>
+            </view>
+          </view>
+        </button>
+        <view>绑定手机</view>
+      </view>
+      <view class="bg_bubble_container4" bindtap="to_fgold">
+        <view class="img_container">
+          <image class="bubble1" src="../../static/index/bg_bubble.png" mode="widthFix"></image>
+          <view class="bubbel_zh_3">
+            <image class="friend_hb" src="../../static/gold.png"></image>
+            <view class="friend_num">{{wfgold}}</view>
+          </view>
+        </view>
+        <view>好友收益</view>
+      </view>
+    </view>
+    <view class="bg_bubble_container5">
+      <view class="img_container">
+        <image class="big_bubble" src="../../static/index/big_bubble.png" mode="widthFix"></image>
+        <view class="bubbel_zh1" bindtap="to_my">
+          <view class="hb_container">
+            <image class="friend_hb1" src="../../static/gold.png"></image>
+            <view class="friend_num1">金币数</view>
+          </view>
+          <view class="money_num">{{gold}}</view>
+          <view class="to_cash">提现</view>
+        </view>
+      </view>
+    </view>
+    <view class="to_cash_btn" bindtap="to_answe">
+      <image class="btn_bg" src="../../static/index/btn_earncash.png"></image>
+      <view class="to_answer">答题赚现金</view>
+    </view>
+  </view>
+  <view class="center" style="margin-top:30rpx;">
+    <view class="conter_1" wx:for="{{activityList}}" wx:for-item="item" wx:key='guid'>
+      <view class="conter_left">
+        <view class="friend">
+          <image class="friend_icon" src="{{item.img}}"></image>
+          <view class="">{{item.hdName}}</view>
+        </view>
+        <view class="day_addition">{{item.caption}}</view>
+      </view>
+      <view bindtap="sort_url" data-smile='{{item.guid}}' data-hdname='{{item.hdName}}'>
+        <button open-type="share" class="share_btn" wx:if="{{item.btnType==1}}">
+          <image class="share_bg" src="../../static/index/btn_di2.png"></image>
+          <view class="share_zh">立即分享</view>
+        </button>
+        <view class="share_btn" wx:if="{{item.btnType==0}}">
+          <image class="share_bg" src="../../static/index/btn_di2.png"></image>
+          <view class="share_zh">查看详情</view>
+        </view>
+        <view class="share_btn" wx:if="{{item.btnType==2}}">
+          <image class="share_bg" src="../../static/index/btn_di2.png"></image>
+          <view class="share_zh">立即参与</view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="conter_1" style="margin-top:20rpx;">
+      <view class="conter_left">
+        <view class="friend">
+          <image class="friend_icon" src="../../static/index/day_hb.png"></image>
+          <view class="">天天抢红包</view>
+        </view>
+        <view class="day_addition">最高10元可提现</view>
+      </view>
+      <view class="share_btn" bindtap="to_hb_party">
+        <image class="share_bg" src="../../static/index/btn_di2.png"></image>
+        <view class="share_zh">查看详情</view>
+      </view>
+    </view>
+    <view class="conter_1" style="margin-top:20rpx;">
+      <view class="conter_left">
+        <view class="friend">
+          <image class="friend_icon" src="../../static/index/icon_jiangbei.png"></image>
+          <view class="">S1赛季即将开始</view>
+        </view>
+        <view class="day_addition">最高奖励3000元</view>
+      </view>
+      <view class="share_btn" bindtap="to_season">
+        <image class="share_bg" src="../../static/index/btn_di2.png"></image>
+        <view class="share_zh">查看详情</view>
+      </view>
+    </view> -->
+  </view>
+  <image class="banner" wx:for="{{banners}}" src="{{item.Img}}" bindtap="to_app" data-id="{{item.AppID}}" mode="widthFix" wx:key='AppID'></image>
+</scroll-view>
+<view class="new_user_hb_box" wx:if="{{new_user_hb}}">
+  <image class="new_hb" src="../../static/new_user_hb.png" bindtap="to_my"></image>
+  <image class="new_hb_close" src="../../static/room/icon_guanbi.png" bindtap="close_new_user_hb"></image>
+</view>
+<view class="hb_party_box" wx:if="{{show_hb_party}}">
+  <image class="hb_party_img" src="../../static/index/hb_party.png" bindtap="to_hb_party"></image>
+  <image class="close_hb_party" src="../../static/room/icon_guanbi.png" bindtap="close_hb_party"></image>
+</view>
+<view style='position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.6);z-index: 1000' wx:if="{{show_alert_box}}">
+  <image style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 500rpx;' src="/static/sign_in/V1.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 180rpx;line-height:180rpx;text-align:center;color:white;font-weight:600;'>
+    {{alert_title}}
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:180rpx;text-align:center;'>
+    已存入您的账户
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:260rpx;text-align:center;font-size:24rpx;color:blueviolet;'>
+    （可在金币收人查看）
+  </view>
+  <image style="position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;" src="/static/sign_in/btn_di2.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;font-size:30rpx;color:white;font-weight:600;' bindtap="close_alert_box">
+    我知道了
+  </view>
+  <image style="width: 40rpx;height: 40rpx;position: absolute;top: 370rpx;right:18%;z-index: 1001" src="/static/sign_in/alert_close.png" bindtap="close_alert_box"></image>
+</view>
+
+<scroll-view scroll-y style='padding-bottom:20rpx' wx:if="{{!islogin}}">
+  <view class='top'>
+    <image class="top_bg" src="../../static/bg_dingbubg.png"></image>
+    <view class="my_info_container">
+      <view class="info_vip">
+        <view style=" display: flex;justify-content: space-between;align-items: center;">
+          <button bindtap="to_my_info">
+            <view class="info_face">
+              <image class="face" src="../../static/bg_head.png"></image>
+            </view>
+          </button>
+          <button class="to_cash" bindtap="to_login">
+            <image class="to_cash_bg" src="../../static/btn_di2.png"></image>
+            <view class="to_cash_zh">立即登录</view>
+          </button>
+        </view>
+      </view>
+      <view class="info_money">
+        <view class="all_money">
+          <view class="all_zh">账号总额(元):</view>
+          <view class="all_num" style="font-size:50rpx;">0</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="my_money_container">
+    <view class="my_gold">
+      <view class="gold_num">
+        <image class="gold" src="../../static/gold.png"></image>
+        <view class="num">0</view>
+      </view>
+      <view>金币收入</view>
+    </view>
+    <view class="my_money">
+      <view class="gold_num">
+        <image class="gold" src="../../static/gold.png"></image>
+        <view class="num">0</view>
+      </view>
+      <view>零钱收入（元）</view>
+    </view>
+  </button>
+  <view class="list">
+    <button>
+      <view class="item" style="border-bottom:1rpx solid #eeeeee">
+        <view class="item_lsft">
+          <image class="info_update" src="../../static/my/icon__0002_3.png"></image>
+          <view>提现信息修改</view>
+        </view>
+        <image class="go" src="../../static/my/go.png"></image>
+      </view>
+    </button>
+    <button>
+      <view class="item">
+        <view class="item_lsft">
+          <image class="info_update" src="../../static/my/icon__0003_4.png"></image>
+          <view>生成专属二维码</view>
+        </view>
+        <image class="go" src="../../static/my/go.png"></image>
+      </view>
+    </button>
+  </view>
+  <view class="list" style='margin-bottom:30rpx'>
+    <view class="item" style="border-bottom:1rpx solid #eeeeee">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0001_2.png"></image>
+        <view>系统信息</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </view>
+    <button class="item">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0000_1.png"></image>
+        <view>联系客服咨询</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </button>
+  </view>
+  <view class="list" style='margin-bottom:30rpx'>
+    <view class="item">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0004_5.png"></image>
+        <view>设置</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </view>
+  </view>
+</scroll-view>

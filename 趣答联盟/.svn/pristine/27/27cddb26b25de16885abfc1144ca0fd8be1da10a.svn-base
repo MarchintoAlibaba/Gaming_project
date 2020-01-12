@@ -1,0 +1,23 @@
+<!--components/zhuanpan/zhuanpan.wxml-->
+<view class="canvas-container">
+   <!-- 外围边框 -->
+   <!-- <view class='gb-wheel-run' style=''></view> -->
+
+   <view animation="{{animationData}}" class="gb-wheel-content" style='width:{{size.w}}rpx;height:{{size.h}}rpx;'>
+      <!-- 选项内容 -->
+      <view class="gb-wheel-list">
+      <image class="main_bg" src="../../static/sign_in/zhuanpan_bg.png" mode="widthFix"></image>
+         <view class="gb-wheel-item" data-index="{{index}}" wx:for="{{awardsConfig.awards}}" wx:key='key'>
+            <view class="gb-wheel-icontent" style="height:262rpx;overflow:hidden;font-size:{{item.name.length>9?'20':'26'}}rpx;line-height:{{item.name.length>9?'20':'26'}}rpx;width:100rpx;padding-top:5rpx;transform: rotate({{index*turnNum}}turn);transform-origin: 50% {{size.h/2-2}}rpx">
+               <text style='word-break:break-all;font-size:30rpx;font-weight: bold;margin-bottom:10rpx;'>{{item.name}}</text>
+               <view wx:if="{{item.tid==1}}">金币</view>
+               <image class="item_img" wx:if="{{item.tid==2}}" src="../../static/sign_in/cash_icon.png"></image>
+               <image class="ipone_icon" wx:if="{{item.tid==3}}" src="../../static/sign_in/ipone_icon.png"></image>
+            </view>
+         </view>
+      </view>
+   </view>
+
+   <!-- 转盘中间的按钮 -->
+   <image bindtap="_zhuan" src='../../static/sign_in/go.png' style='width:{{size.h/4.4}}rpx;position:absolute;left:39%;top:30%;margin-top:-11rpx;z-index:9999;' mode='widthFix'></image>
+</view>

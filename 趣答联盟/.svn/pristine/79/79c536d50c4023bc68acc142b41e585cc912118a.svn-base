@@ -1,0 +1,28 @@
+<image class="bg" src="../../../static/my/VIP_bg.png"></image>
+<image class="addition_desc" src="../../../static/my/btn_jiac.png" bindtap="addition_desc"></image>
+<view class="vip_top">
+  您目前是
+  <image class="vip_class" src="../../../static/my/vip{{integral}}.png"></image>
+  {{goldAdd == 0 ? "" : "金币加成提高" + goldAdd + "%"}}
+</view>
+<view class="vip_exp">做VIP限时福利和VIP成长任务可快速升级</view>
+<view class="vip_desc">
+  <view class="desc_top">
+    <view class="top_left"><text style="font-weight: bold">VIP</text>等级</view>
+    <view class="top_item">金币加成</view>
+    <view class="top_item">提现次数</view>
+    <view class="top_item" style="width:26%;">红包奖励</view>
+    <view class="top_item">免手续费</view>
+  </view>
+  <view class="desc_top" wx:for="{{vips}}">
+      <view class="top_left" style="font-weight:bold">VIP{{item.VId}}</view>
+      <view class="top_item">{{item.goldAdd == 0 ? "-" : item.goldAdd + "%"}}</view>
+      <view class="top_item">{{item.CashN == 0 ? "-" : item.CashN}}</view>
+      <view class="top_item" style="width:26%;">{{item.additional == 0 ? "-" : "1-100随机"}}</view>
+      <view class="top_item">{{item.CashR == 0 ? "是" : "否"}}</view>
+  </view>
+</view>
+<view class="addition_box" wx:if="{{show_box}}">
+  <image class="box_bg" src="../../../static/my/bg_sm.png"></image>
+  <image class="box_close" src="../../../static/my/btn_gb.png" bindtap="close_box"></image>
+</view>

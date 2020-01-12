@@ -1,0 +1,82 @@
+page{
+  width: 100%;
+  height: 100%;
+  color: #d49f12;
+}
+.bg{
+  width: 100%;
+  height: 100%
+}
+.addition_desc{
+  position: absolute;
+  top: 70rpx;
+  right: 0;
+  width: 136rpx;
+  height: 42rpx;
+}
+.vip_top{
+  position: absolute;
+  top: 180rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+.vip_class{
+  width: 74rpx;
+  height: 27rpx;
+}
+.vip_exp{
+  position: absolute;
+  top: 230rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+}
+.vip_desc{
+  position: absolute;
+  top: 300rpx;
+  left: 6%;
+  width: 88%;
+  border-top: 1rpx solid #4f4f4f;
+  border-left: 1rpx solid #4f4f4f;
+  font-size: 26rpx;
+  text-align: center;
+}
+.desc_top{
+  display: flex;
+}
+.top_left{
+  width: 20%;
+  height: 60rpx;
+  border-right: 1rpx solid #4f4f4f;
+  border-bottom: 1rpx solid #4f4f4f;
+  line-height: 60rpx;
+}
+.top_item{
+  width: 18%;
+  height: 60rpx;
+  border-right: 1rpx solid #4f4f4f;
+  border-bottom: 1rpx solid #4f4f4f;
+  line-height: 60rpx;
+}
+.addition_box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6)
+}
+.box_bg{
+  width: 570rpx;
+  height: 600rpx;
+  margin-left: 90rpx;
+  margin-top: 200rpx;
+}
+.box_close{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 340rpx;
+}

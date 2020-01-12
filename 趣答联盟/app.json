@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/addition/addition",
+    "pages/play/play",
+    "pages/my/my",
+    "pages/answe_union/answe_union",
+    "pages/index/hb_desc/hb_desc",
+    "pages/addition/rule/rule",
+    "pages/my/my_info/my_info",
+    "pages/my/OR_code/OR_code",
+    "pages/my/vip_desc/vip_desc",
+    "pages/my/money_detail/money_detail",
+    "pages/my/system_detail/system_detail",
+    "pages/my/to_set/to_set",
+    "pages/my/edit_info/edit_info",
+    "pages/play/sign_in/sign_in",
+    "pages/answe_union/room_wait/room_wait",
+    "pages/answe_union/room/room",
+    "pages/answe_union/result/result",
+    "pages/index/hb_party/hb_party",
+    "pages/index/season/season",
+    "pages/my/to_cash/to_cash",
+    "pages/index/choose_id/choose_id"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#7004fb"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/loading.png",
+        "selectedIconPath": "static/loading.png"
+      },
+      {
+        "pagePath": "pages/play/play",
+        "text": "试玩",
+        "iconPath": "static/loading.png",
+        "selectedIconPath": "static/loading.png"
+      },
+      {
+        "pagePath": "pages/addition/addition",
+        "text": "加成",
+        "iconPath": "static/loading.png",
+        "selectedIconPath": "static/loading.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/loading.png",
+        "selectedIconPath": "static/loading.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {},
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896",
+    "wxfb2e1891f7aa5941",
+    "wxc8d792c5da5d4008"
+  ]
+}

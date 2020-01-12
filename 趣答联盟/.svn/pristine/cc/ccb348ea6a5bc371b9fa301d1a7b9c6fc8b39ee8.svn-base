@@ -1,0 +1,17 @@
+<view class="top">
+  <image class="top_bg" src="../../../static/room/bg_zs.png" wx:if="{{show_btn == 0}}"></image>
+  <view class="top_zh" wx:if="{{show_btn == 0}}">距离答题开始还有</view>
+  <view class="time" wx:if="{{show_btn == 0}}">
+    <text>{{hou}}</text> :
+    <text>{{min}}</text> :
+    <text>{{sec}}</text>
+  </view>
+  <view class="to_room" wx:if="{{show_btn == 1}}" bindtap="to_room" style='width:40%;left:30%;'>
+    <image class="to_room_bg" src="../../../static/room/btn_ksdt.png"></image>
+    <view class="to_room_zh">开始答题</view>
+  </view>
+  <view class="to_room" wx:if="{{show_btn == 2}}">
+    <view class="to_room_zh">该房间答题已结束，换其他房间试试吧~</view>
+  </view>
+</view>
+<image class="bottom" wx:for="{{banners}}" src="{{item.Img}}" bindtap="to_app" data-id="{{item.AppID}}" mode="widthFix"></image>

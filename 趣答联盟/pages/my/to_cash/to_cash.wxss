@@ -1,0 +1,65 @@
+page{
+  background: #f4f6f8
+}
+.top{
+  background: #fff;
+  padding: 20rpx 7%;
+  width: 86%;
+}
+.top_img{
+  width: 100%;
+  height: 220rpx;
+}
+.balance{
+  position: absolute;
+  top: 20rpx;
+  left: 12%;
+  height: 220rpx;
+  line-height: 220rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.list_container{
+  padding: 30rpx 30rpx 10rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item{
+  font-size: 26rpx;
+  font-weight: bold;
+  width: 150rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #e1e1e1;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.checked{
+  background: #6c00fe;
+  border: 1rpx solid #301a4f;
+  color: #fff;
+}
+.frequency{
+  text-align: center;
+  font-size: 24rpx;
+  color: #666
+}
+.btn{
+  width: 50%;
+  height: 70rpx;
+  margin: 20rpx 0 30rpx 25%;
+}
+.rule{
+  padding: 10rpx 4%;
+  width: 92%;
+}
+.rule_item{
+  color: #999;
+  font-size: 22rpx;
+  text-align: justify;
+  line-height: 34rpx;
+}

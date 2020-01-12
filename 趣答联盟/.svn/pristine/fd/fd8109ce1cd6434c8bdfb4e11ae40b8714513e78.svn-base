@@ -1,0 +1,38 @@
+page{
+  background: #7606f8;
+  overflow: hidden
+}
+.top{
+  width: 100%;
+  height: 240rpx;
+  display: flex;
+}
+.desc_bg{
+  width: 100%;
+  height: 1200rpx;
+  display: flex;
+}
+.desc_container{
+  position: absolute;
+  top: 280rpx;
+  left: 5%;
+  background: #fff;
+  padding: 30rpx 4%;
+  width: 82%;
+  text-align: justify
+}
+.hb_title{
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #6b17e6;
+}
+.hn_desc1{
+  width: 90%;
+  margin: 30rpx 5%;
+  font-size: 22rpx; 
+}
+.way{
+  color: #ff6c00;
+  font-size: 22rpx;
+  margin-top: 30rpx;
+}

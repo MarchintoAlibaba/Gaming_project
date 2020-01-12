@@ -1,0 +1,13 @@
+<view class="top">
+  <view class="top_item {{id==1?'seleck':''}}" id="1" bindtap="target">金币明细</view>
+  <view class="top_item {{id==3?'seleck':''}}" id="3" bindtap="target">零钱明细</view>
+</view>
+<view class="detail_item" wx:for="{{records}}">
+  <view class="item_eft">
+    <view class="item_title">{{item.typename}}</view>
+    <view class="item_time">{{item.userid}}</view>
+  </view>
+  <view class="item_right">
+    <text style="color:#f3591d">{{item.typename == "提现" ? '-':'+'}}{{item.num}}</text>{{item.type == 1 ? '金币':'元'}}
+  </view>
+</view>

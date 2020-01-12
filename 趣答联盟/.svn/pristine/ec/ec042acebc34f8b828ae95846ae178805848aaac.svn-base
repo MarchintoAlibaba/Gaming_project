@@ -1,0 +1,104 @@
+<view class="top">
+  <image class="top_bg" src="../../../static/sign_in/bg_di1.png"></image>
+  <image class="sign_icon" src="../../../static/sign_in/sign_icon.png"></image>
+  <image class="mian_bg" src="../../../static/sign_in/bj.png"></image>
+  <image class="main_title" src="../../../static/sign_in/gift.png"></image>
+  <view class="main_container">
+    <view class="item">
+      <view class="date">{{day1}}</view>
+      <image class="gold" wx:if="{{t1 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t1 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 1}}"></image>
+      <view wx:if="{{t1 == 0}}" class="gold_num">{{n1}}</view>
+      <view wx:if="{{t1 > 0}}" class="gold_num">{{t1}}</view>
+    </view>
+    <view class="item">
+      <view class="date">{{day2}}</view>
+      <image class="gold" wx:if="{{t2 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t2 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 2}}"></image>
+      <view wx:if="{{t2 == 0}}" class="gold_num">{{n2}}</view>
+      <view wx:if="{{t2 > 0}}" class="gold_num">{{t2}}</view>
+    </view>
+    <view class="item">
+      <view class="date">{{day3}}</view>
+      <image class="gold" wx:if="{{t3 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t3 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 3}}"></image>
+      <view wx:if="{{t3 == 0}}" class="gold_num">{{n3}}</view>
+      <view wx:if="{{t3 > 0}}" class="gold_num">{{t3}}</view>
+    </view>
+    <view class="item">
+      <view class="date">{{day4}}</view>
+      <image class="gold" wx:if="{{t4 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t4 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 4}}"></image>
+      <view wx:if="{{t4 == 0}}" class="gold_num">{{n4}}</view>
+      <view wx:if="{{t4 > 0}}" class="gold_num">{{t4}}</view>
+    </view>
+    <view class="item">
+      <view class="date">{{day5}}</view>
+      <image class="gold" wx:if="{{t5 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t5 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 5}}"></image>
+      <view wx:if="{{t5 == 0}}" class="gold_num">{{n5}}</view>
+      <view wx:if="{{t5 > 0}}" class="gold_num">{{t5}}</view>
+    </view>
+    <view class="item">
+      <view class="date">{{day6}}</view>
+      <image class="gold" wx:if="{{t6 == 0}}" src="../../../static/gold.png"></image>
+      <image class="hb" wx:if="{{t6 > 0}}" src="../../../static/sign_in/hb.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 6}}"></image>
+      <view wx:if="{{t6 == 0}}" class="gold_num">{{n6}}</view>
+      <view wx:if="{{t6 > 0}}" class="gold_num">{{t6}}</view>
+    </view>
+    <view class="item" bindtap="show_box">
+      <view class="date">{{day7}}</view>
+      <image class="box" src="../../../static/sign_in/00058.png"></image>
+      <image class="ok" src="../../../static/sign_in/ok.png" wx:if="{{sign >= 7}}"></image>
+    </view>
+  </view>
+  <view class="btn_sign_in">
+    <image class="btn_bg" src="../../../static/sign_in/btn_earncash.png"></image>
+    <view class="btn_zh" wx:if="{{issign == false}}" bindtap="to_sign">签到</view>
+    <view class="btn_zh" wx:if="{{issign == true}}">已连续签到{{sign}}天</view>
+    <view style='font-size:24rpx;text-align: center;'>连续签到7天，抽取神秘大礼！</view>
+  </view>
+</view>
+<view class="banner">
+  <image class="banner_img" wx:for="{{banners}}" src="{{item.Img}}" bindtap="to_app" data-id="{{item.AppID}}" mode="widthFix"></image>
+</view>
+<view class="box1" wx:if="{{show_box}}">
+  <image class="main_bg" src="../../../static/sign_in/box_bg.png"></image>
+  <image class="sign_in_7" src="../../../static/sign_in/sign_in_7.png"></image>
+   <zhuanpan class='zhuanpan' id='zhuanpan' 
+   bind:myData='getData' 
+   bind:myAwards="getAwards" 
+   bind:startZhuan="startZhuan" 
+   size='{{size}}' 
+   iszhuan='{{iszhuan}}' 
+   musicflg='{{musicflg}}' 
+   fastJuedin='{{fastJuedin}}' 
+   repeat='{{repeat}}' 
+   zhuanpanArr='{{xiaojuedingArr}}' 
+   awardsConfig='{{awardsConfig}}'>
+   </zhuanpan>
+  <image class="box_close" src="../../../static/sign_in/close.png" bindtap="close_box"></image>
+</view>
+<view style='position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.6);z-index: 1000' wx:if="{{show_alert_box}}">
+  <image style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 500rpx;' src="/static/sign_in/V1.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 180rpx;line-height:180rpx;text-align:center;color:white;font-weight:600;'>
+    {{alert_title}}
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:180rpx;text-align:center;'>
+    已存入您的账户
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:260rpx;text-align:center;font-size:24rpx;color:blueviolet;'>
+    （可在金币收人查看）
+  </view>
+  <image style="position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;" src="/static/sign_in/btn_di2.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;font-size:30rpx;color:white;font-weight:600;' bindtap="close_alert_box">
+    我知道了
+  </view>
+  <image style="width: 40rpx;height: 40rpx;position: absolute;top: 370rpx;right:18%;z-index: 1001" src="/static/sign_in/alert_close.png" bindtap="close_alert_box"></image>
+</view>

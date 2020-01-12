@@ -1,0 +1,151 @@
+page{
+  background: #3c3c8a
+}
+.btn_friend{
+  width: 320rpx;
+  height: 80rpx;
+}
+.btn_bg{
+  width: 100%;
+  height: 100%
+}
+.main_container{
+  position: relative;
+  width: 84%;
+  height: 830rpx;
+  margin: 60rpx 7%;
+}
+.my_OR_code{
+  position: absolute;
+  bottom: 100rpx;
+  left: 25%;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+.my_info{
+  position: absolute;
+  top: 130rpx;
+  left: 100rpx;
+  width: 130rxp;
+  text-align: center
+}
+.my_face{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1rpx solid #fff;
+}
+.my_name{
+  font-size: 30rpx;
+  color: #fff;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.btn_icon{
+  width: 33rpx;
+  height: 33rpx;
+  margin-right: 10rpx;
+}
+.main{
+  width: 84%;
+  height: 830rpx;
+  margin: 60rpx 7%;
+  border-radius: 20rpx;
+}
+.btn_friend{
+  position: relative;
+  width: 320rpx;
+  height: 80rpx;
+}
+.btn_zh{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 28rpx;
+}
+.btn_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140rpx;
+}
+.box{
+  position: fixed;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.box_container{
+  width: 600rpx;
+  height: 750rpx;
+  position: absolute;
+  z-index: 11;
+  top: 100rpx;
+  left: 75rpx;
+}
+.box_bg{
+  width: 100%;
+  height: 100%;
+}
+.box_main{
+  position: absolute;
+  width: 600rpx;
+  height: 750rpx;
+  z-index: 12;
+  top: 0;
+  left: 0;
+}
+.main_top{
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ff5454;
+  color: #fff;
+}
+.scroll{
+  height: 570rpx;
+  padding: 30rpx;
+}
+.scroll_item{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10rpx 0;
+  font-size: 28rpx;
+  color: #fff;
+}
+.box_face{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+.box_name{
+  width: 260rpx;
+  text-align: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.box_item_right>text{
+  color: #ff5454
+}
+.close{
+  position: absolute;
+  top: 880rpx;
+  width: 120rpx;
+  height: 120rpx;
+  left: 315rpx;
+  z-index: 101;
+}

@@ -1,0 +1,3 @@
+<image class="rule_banner" src="../../../static/addition/rule_banner.png"></image>
+<image class="rule_detail" src="../../../static/addition/0022.png" style='z-index:5;position:absolute;top:240rpx;left:0;height:1454rpx;'></image>
+<image class="rule_detail" src="../../../static/addition/0021.png" style='padding:5%;width:90%;z-index:10;position:absolute;top:240rpx;left:0;'></image>

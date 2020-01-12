@@ -1,0 +1,140 @@
+<scroll-view scroll-y style='padding-bottom:20rpx'>
+  <view class='top'>
+    <image class="top_bg" src="../../static/bg_dingbubg.png"></image>
+    <view class="my_info_container">
+      <view class="info_vip">
+        <view style=" display: flex;justify-content: space-between;align-items: center;">
+          <button bindtap="to_my_info">
+            <view class="info_face">
+              <image class="face" src="{{avatarUrl}}"></image>
+              <image class="vip_icon" src="{{'../../static/my/vip' + integral + '.png'}}"></image>
+            </view>
+          </button>
+          <view class="vip_container">
+            <view class="vip_top">
+              <view class="name">{{nickName}}</view>
+              <button bindtap="to_vip_desc">
+                <image class="vip_desc" src="../../static/my/btn_cktq.png"></image>
+              </button>
+            </view>
+            <view class="vip_center">
+              <image class="vip_base" src="../../static/my/ht_1.png"></image>
+              <image class="vip_length" style='width:{{num}}%' src="../../static/my/ht_2.png"></image>
+              <view class="vip_num">{{exp}}/{{sumexp}}</view>
+            </view>
+            <view class="vip_class">
+              <view class="vip_start" style="color:#3576cf">vip{{integral}}</view>
+              <view class="vip_end" style="color:#e96650">vip{{integral + 1}}</view>
+            </view>
+          </view>
+        </view>
+        <button bindtap="to_OR_code">
+          <view class="share">
+            <image class="QR_code" src="../../static/my/bg_fxzq.png"></image>
+            <image class="QR_code_icon" src="../../static/my/icon__0003_4.png"></image>
+          </view>
+        </button>
+      </view>
+      <view class="info_money">
+        <view class="all_money">
+          <view class="all_zh">账号总额(元):</view>
+          <view class="all_num" style="font-size:50rpx;">{{smoney}}</view>
+        </view>
+        <button class="to_cash" bindtap="to_cash">
+          <image class="to_cash_bg" src="../../static/btn_di2.png"></image>
+          <view class="to_cash_zh">立即提现</view>
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="my_money_container">
+    <view class="my_gold" bindtap="to_detail1">
+      <view class="gold_num">
+        <image class="gold" src="../../static/gold.png"></image>
+        <view class="num">{{gold}}</view>
+      </view>
+      <view>金币收入</view>
+    </view>
+    <view class="my_money" bindtap="to_detail2">
+      <view class="gold_num">
+        <image class="gold" src="../../static/gold.png"></image>
+        <view class="num">{{money}}</view>
+      </view>
+      <view>零钱收入（元）</view>
+    </view>
+  </view>
+  <view class="banner">
+    <image class="banner_img" wx:for="{{banners}}" src="{{item.Img}}" bindtap="to_app" data-id="{{item.AppID}}" mode="widthFix"></image>
+  </view>
+  <view class="list">
+    <button wx:if="{{!isphone}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <view class="item" style="border-bottom:1rpx solid #eeeeee">
+        <view class="item_lsft">
+          <image class="info_update" src="../../static/my/icon__0002_3.png"></image>
+          <view>提现信息修改</view>
+        </view>
+        <image class="go" src="../../static/my/go.png"></image>
+      </view>
+    </button>
+    <button wx:if="{{isphone}}" bindtap="to_edit_info">
+      <view class="item" style="border-bottom:1rpx solid #eeeeee">
+        <view class="item_lsft">
+          <image class="info_update" src="../../static/my/icon__0002_3.png"></image>
+          <view>提现信息修改</view>
+        </view>
+        <image class="go" src="../../static/my/go.png"></image>
+      </view>
+    </button>
+    <button bindtap="to_OR_code">
+      <view class="item">
+        <view class="item_lsft">
+          <image class="info_update" src="../../static/my/icon__0003_4.png"></image>
+          <view>生成专属二维码</view>
+        </view>
+        <image class="go" src="../../static/my/go.png"></image>
+      </view>
+    </button>
+  </view>
+  <view class="list" style='margin-bottom:30rpx'>
+    <view class="item" style="border-bottom:1rpx solid #eeeeee" bindtap="to_system">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0001_2.png"></image>
+        <view>系统信息</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </view>
+    <button class="item" open-type="contact">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0000_1.png"></image>
+        <view>联系客服咨询</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </button>
+  </view>
+  <view class="list" style='margin-bottom:30rpx'>
+    <view class="item" bindtap="to_set">
+      <view class="item_lsft">
+        <image class="info_update" src="../../static/my/icon__0004_5.png"></image>
+        <view>设置</view>
+      </view>
+      <image class="go" src="../../static/my/go.png"></image>
+    </view>
+  </view>
+</scroll-view>
+<view style='position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.6);z-index: 1000' wx:if="{{show_alert_box}}">
+  <image style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 500rpx;' src="/static/sign_in/V1.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 180rpx;line-height:180rpx;text-align:center;color:white;font-weight:600;'>
+    {{alert_title}}
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:180rpx;text-align:center;'>
+    已存入您的账户
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:260rpx;text-align:center;font-size:24rpx;color:blueviolet;'>
+    （可在金币收人查看）
+  </view>
+  <image style="position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;" src="/static/sign_in/btn_di2.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;font-size:30rpx;color:white;font-weight:600;' bindtap="close_alert_box">
+    我知道了
+  </view>
+  <image style="width: 40rpx;height: 40rpx;position: absolute;top: 370rpx;right:18%;z-index: 1001" src="/static/sign_in/alert_close.png" bindtap="close_alert_box"></image>
+</view>

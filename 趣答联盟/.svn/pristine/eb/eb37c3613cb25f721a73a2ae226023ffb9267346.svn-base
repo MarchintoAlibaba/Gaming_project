@@ -1,0 +1,28 @@
+<view class="top">
+  <image class="top_img" src="../../../static/my/v1.png"></image>
+  <view class="balance">账户额度：{{smoney}}元</view>
+  <view class="list_container">
+    <view class="item {{item.checked?'checked':''}}" wx:for="{{list}}" wx:key="index" data-num="{{item.num}}" data-checked="{{item.checked}}" bindtap="checked">{{item.num}}</view>
+  </view>
+  <view class="frequency">今日可提现{{CashNum}}次</view>
+  <image class="btn" src="../../../static/my/v4.png" bindtap="go_cash"></image>
+</view>
+<view class="rule">
+  <view class="rule_item">1.新用户首次满一元即可提现且免手续费；(10000金币≈1元)</view>
+  <view class="rule_item">2.系统默认每日可提现一次，提升VIP等级可增加 每日提现次数；
+  </view>
+  <view class="rule_item">3.每笔提现系统收取10%的手续费，提升VIP 等级可免手续费；
+  </view>
+  <view class="rule_item">4.提交提现申请后，平台将在3个工作日内处理申请， 申请成功后将存入微信零钱；
+  </view>
+  <view class="rule_item">5.提现审核期间，账户金币及现金余额显示为已提现 后的数量，并无法中途取消提现；
+  </view>
+  <view class="rule_item">6、应腾讯公司要求，您的微信必须通过实名才可以成
+功提现，否则将提现不成功；
+  </view>
+  <view class="rule_item">7、利用技术手段，进行恶意变动账户金币、余额数量
+的，账户金币和余额将会被清零并封存，趣答联盟保留
+追究法律责任的权利；
+  </view>
+  <view class="rule_item">8、如有任何问题，请联系平台客服</view>
+</view>

@@ -1,0 +1,49 @@
+<view class="content">
+  <image class="help_img" src="../../../static/index/title_background.png"></image>
+  <view class="nav-content">
+    <view class="all-content">
+      <image class="logo" src="../../../static/index/logo.png"></image>
+      <view class="title">最高奖励<view class="title-money">{{rankList[0].money}}</view>元</view>
+      <view class="season-module">
+        <view class="season-title"><text class="special-title">{{activityDetails.sjName}}</text>赛季即将开始</view>
+      </view>
+      <view class="season-time">活动时间：{{activityStartTime}}-{{activityEndTime}}</view>
+    </view>
+  </view>
+</view>
+<view  class="content">
+  <image class="help_img background-content" src="../../../static/index/hb_di2.png"></image>
+  <view class="activity-content">
+    <view class="big-box">
+      <view class="activity-box">
+        <image class="content-title" src="../../../static/index/content_title.png"></image>
+        <view class="ranking-all">
+          <view class="ranking" wx:for="{{rankList}}" wx:for-item="item" wx:key='i'>
+              <view class="ranking-box">第<view class="ranking-center">{{item.ranking}}</view>名 ：</view>
+              <view>{{item.money}}元现金</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn">
+      <button class="btn-friend"  open-type="share">邀请好友一起（有福同享）</button>
+      <view class="btn-friend btn-bottom"><text bindtap="to_seasonRanking">赛季排行</text> | <text bindtap="show_box">活动规则</text></view>
+    </view>
+  </view>
+</view>
+<view class="rules" wx:if="{{show_box}}">
+  <view class="rulse-box">
+    <view class="rulse-top">
+      <view class="rules-title">S1</view>赛季须知
+      <image bindtap="close_box" class="rulse-close" src="../../../static/sign_in/alert_close.png"></image>
+    </view>
+    <view class="rulse-bottom">
+      <view>赛季开启后，参与答题即可获得赛季积分。</view>
+      <view>为保证赛季的公平性，只有每日系统赠送的5次答题次数才可获得赛季积分。</view>
+      <view>赛季排行榜每日凌晨00：00：00更新，以积分进行排名，积分越多排名越高，积分相同时，先到的排名高。</view>
+      <view>赛季奖励将在赛季结束后的1个工作日内，自动在您的零钱钱包中增加奖励。</view>
+      <view>禁止一切舞弊行为，一经发现直接封号处理，并保留追究其法律责任的权力。</view>
+      <view>本活动最终解释权归趣答赚官方所有！</view>
+    </view>
+  </view>
+</view>

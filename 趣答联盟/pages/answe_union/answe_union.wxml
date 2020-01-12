@@ -1,0 +1,183 @@
+<image class="top_bg" src="../../static/bg_dingbubg.png"></image>
+<view class="swiper">
+  <swiper class="swiper_container" circular="true" autoplay="autoplay" interval="3000" duration="500">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="btn_container">
+  <image class="btn_img" src="../../static/answe_union/btn_assist.png" bindtap="show_help"></image>
+  <image class="btn_img" src="../../static/answe_union/btn_message.png" bindtap="to_my"></image>
+  <image class="btn_img" src="../../static/answe_union/btn_list.png" bindtap="show_list"></image>
+  <image class="btn_img" src="../../static/answe_union/btn_welfare.png" bindtap="to_play"></image>
+</view>
+<view class="room_top">
+  <view class="room_top_left">
+    <view class="room_zh">答题房间</view>
+    <view class="refresh_time">(每日0点更新)</view>
+  </view>
+  <view class="room_top_left">
+    <view class="answer_num">今日剩余答题次数： {{QNum}}</view>
+    <image class="add" src="../../static/answe_union/btn_add.png" bindtap="add"></image>
+  </view>
+</view>
+<view class="room_list">
+  <view class="item" bindtap="to_room_wait" wx:for="{{answers}}" data-id='{{item.guid}}'>
+    <image wx:if="{{item.status == 1}}" class="item_bg" src="../../static/answe_union/bg_room1.png"></image>
+    <image wx:if="{{item.status == 2}}" class="item_bg" src="../../static/answe_union/bg_room3.png"></image>
+    <view class="item_detail">
+      <image wx:if="{{item.status == 1}}" class="item_icon" src="../../static/answe_union/bg_head.png"></image>
+      <image wx:if="{{item.status == 2}}" class="item_icon" src="../../static/answe_union/bg_head2.png"></image>
+      <view class="item_title">{{item.Name}}</view>
+      <view wx:if="{{item.status == 1}}" class="item_money">{{item.Bouns}}元</view>
+      <view wx:if="{{item.status == 2}}" class="item_money1">{{item.Bouns}}元</view>
+      <view wx:if="{{item.status == 1}}" class="item_num">{{item.popel}}/{{item.Num}}人</view>
+    </view>
+    <view wx:if="{{item.status == 1}}" class="item_state">{{item.test}}</view>
+    <view wx:if="{{item.status == 2}}" class="item_state1">{{item.test}}</view>
+  </view>
+</view>
+<view class="add_box" wx:if="{{show_add}}">
+  <view class="add_container">
+    <image class="add_bg" src="../../static/answe_union/bg_di2.png"></image>
+    <view class="add_detail">
+      <view class="add_top">
+        <image class="add_icon" src="../../static/answe_union/icon_yq.png"></image>
+        <view class="add_title" style="line-height:40rpx;">成功邀请新用户玩趣答题赚，可获得一次答题机会</view>
+      </view>
+      <view class="add_list">当您进入房间时会优先消耗每日次数，当每日次数消耗完，才会消耗奖励次数</view>
+      <view class="add_list">消耗奖励次数进入答题房间，您仍可以获得奖励，但不再获得经验与积分</view>
+      <view class="add_list">奖励次数如未用完，则系统会持续为您保留，直至消耗完毕</view>
+    </view>
+    <button open-type="share" class="add_box_btn">
+      <image style="width:100%;height:100%" src="../../static/answe_union/btn_aniu1.png"></image>
+    </button>
+    <image class="add_close" src="../../static/answe_union/btn_gb.png" bindtap="close_add"></image>
+  </view>
+</view>
+<view class="help_box" wx:if="{{show_help}}">
+  <view class="add_container">
+    <image class="add_bg" src="../../static/answe_union/bg_di2.png"></image>
+    <view class="help">帮助</view>
+    <view class="help_detail" style='height:590rpx;overflow:auto;'>
+      <view>
+        <view class="add_title">1. 答题过程中的得分和积分有什么关系？</view>
+        <view class="add_list">得分：是指在答题过程中，答对题目所获得的分数，用于当前房间场次的名次排名； 积分：是指在完成当前所有答题后获得的积分数值，用于赛季排名
+        </view>
+        <view class="add_title" style="margin-top:30rpx;">2. 答题时，如何获得高得分？</view>
+        <view class="add_list">每道题目的得分是由您的答题速度、答题正确以及VIP等级额外加分的总和；简单的来说，就是在回答正确的前提下，回答速度越快、VIP等级越高所获得的得分就越高。每次答题结束后，均可获得经验值用来提升VIP等级。您也可以选择分享给好友来获取双倍经验值。</view>
+        <view class="add_title" style="margin-top:30rpx;">3. 如何获得提升VIP等级的经验值？</view>
+        <view class="add_list">A、 每次房间内所有答题完后均可获得经验值，选择分享给好友可以获得双倍经验值；</view>
+        <view class="add_list">B、通过完成VIP限时福利任务，可获得经验值；</view>
+        <view class="add_list">C、进行每日签到任务可获得经验值。</view>
+        <view class="add_title" style="margin-top:30rpx;">4. 赛季奖励什么时候发放？</view>
+        <view class="add_list">赛季奖励将在赛季结束后的1个工作日内，自动在您的零钱钱包中增加奖励。</view>
+      </view>
+    </view>
+    <image class="add_close" src="../../static/answe_union/btn_gb.png" bindtap="close_help"></image>
+  </view>
+</view>
+<view class="list_box" wx:if="{{show_list}}">
+  <view class="list_container">
+    <image class="add_bg" src="../../static/answe_union/list_bg.png"></image>
+    <view class="list_zh">第一赛季排行榜</view>
+    <view class="list_time">赛季未开始</view>
+    <view class="help_detail" style='display:none;'>
+      <scroll-view scroll-y style="height:530rpx;">
+        <view class="list_item">
+          <view class="item_left">
+            <image class="item_left_img" src="../../static/answe_union/icon_hz1.png"></image>
+          </view>
+          <view class="item_right">
+            <view class="item_right_img_container">
+              <image class="face" src="../../static/bg_head.png"></image>
+              <view class="grade">1</view>
+            </view>
+            <view class="name">小猪佩奇</view>
+            <view class="score">
+              <view class="score_zh">赛季积分</view>
+              <view class="score_num">4451</view>
+            </view>
+          </view>
+        </view>
+        <view class="list_item">
+          <view class="item_left">
+            <image class="item_left_img" src="../../static/answe_union/icon_hz1.png"></image>
+          </view>
+          <view class="item_right">
+            <view class="item_right_img_container">
+              <image class="face" src="../../static/bg_head.png"></image>
+              <view class="grade">1</view>
+            </view>
+            <view class="name">小猪佩奇</view>
+            <view class="score">
+              <view class="score_zh">赛季积分</view>
+              <view class="score_num">4451</view>
+            </view>
+          </view>
+        </view>
+        <view class="list_item">
+          <view class="item_left">
+            <image class="item_left_img" src="../../static/answe_union/icon_hz1.png"></image>
+          </view>
+          <view class="item_right">
+            <view class="item_right_img_container">
+              <image class="face" src="../../static/bg_head.png"></image>
+              <view class="grade">1</view>
+            </view>
+            <view class="name">小猪佩奇</view>
+            <view class="score">
+              <view class="score_zh">赛季积分</view>
+              <view class="score_num">4451</view>
+            </view>
+          </view>
+        </view>
+        <view class="list_item">
+          <view class="item_left">
+            <image class="item_left_img" src="../../static/answe_union/icon_hz1.png"></image>
+          </view>
+          <view class="item_right">
+            <view class="item_right_img_container">
+              <image class="face" src="../../static/bg_head.png"></image>
+              <view class="grade">1</view>
+            </view>
+            <view class="name">小猪佩奇</view>
+            <view class="score">
+              <view class="score_zh">赛季积分</view>
+              <view class="score_num">4451</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view>
+        <view class="list_item" style="margin:20rpx 0 0 0">
+          <view class="item_left">
+            <image class="item_left_img" src="../../static/answe_union/icon_hz1.png"></image>
+          </view>
+          <view class="item_right">
+            <view class="item_right_img_container">
+              <image class="face" src="../../static/bg_head.png"></image>
+              <view class="grade">1</view>
+            </view>
+            <view class="name">小猪佩奇小猪佩奇</view>
+            <view class="score">
+              <view class="score_zh">赛季积分</view>
+              <view class="score_num">4451</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="list_reward">
+      <view class="list_btn">
+        <image class="list_reward_bg" src="../../static/answe_union/btn_anniu1.png"></image>
+        <view class="list_btn_zh">赛季奖励设置</view>
+      </view>
+      <image class="list_reward_img" src="../../static/answe_union/icon_jb.png"></image>
+    </view>
+    <image class="add_close" src="../../static/answe_union/btn_gb.png" bindtap="close_list"></image>
+  </view>
+</view>

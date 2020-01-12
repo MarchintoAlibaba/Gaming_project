@@ -1,0 +1,16 @@
+<view class="top">我是</view>
+<view class="three_id">最多选择三个身份</view>
+<view class="id_container">
+  <view class="item" wx:for="{{id_list_one}}" wx:key="index">
+    <image class="id_img" wx:if="{{item.src!=choose_id_list[0]&&item.src!=choose_id_list[1]&&item.src!=choose_id_list[2]}}" src="{{item.src}}" bindtap="choose" data-src="{{item.src}}" data-name="{{item.name}}"></image>
+    <image class="id_img" wx:if="{{item.src==choose_id_list[0]||item.src==choose_id_list[1]||item.src==choose_id_list[2]}}" src="{{item.src}}"bindtap="choose" data-src="{{item.src}}" data-name="{{item.name}}"></image>
+    <view class="item_zh">{{item.name}}</view>
+  </view>
+</view>
+<view class="btn" bindtap="to_close_id">
+  <image class="btn_img" src="../../../static/choose_id/v4.png"></image>
+  <view class="btn_zh" wx:if="{{choose_id_list.length == 0}}">最多选择三个</view>
+  <view class="btn_zh" wx:if="{{choose_id_list.length == 1}}">已选一个，下一步</view>
+  <view class="btn_zh" wx:if="{{choose_id_list.length == 2}}">已选二个，下一步</view>
+  <view class="btn_zh" wx:if="{{choose_id_list.length == 3}}">已选三个，下一步</view>
+</view>

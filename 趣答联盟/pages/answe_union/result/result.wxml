@@ -1,0 +1,78 @@
+<image class="top_bg" src="../../../static/room/bg_dadi3.png"></image>
+<view class="my_sorce_container">
+  <view class="face">
+    <image class="face_img" src="{{myinfo.avatarUrl}}"></image>
+    <view class="grade">{{index}}</view>
+  </view>
+  <view class="reward">
+    <view class="reward_container">
+      <view class="ranking" style="color :#e17642">恭喜你位列榜单第{{index}}名</view>
+      <view class="reward_money">
+        <image class="money_icon" src="../../../static/room/icon_hongbao.png"></image>
+        <view>奖励</view>
+        <view class="money_num" style="color :#e17642">￥{{myinfo.money}}</view>
+      </view>
+      <view class="reward_money">
+        <image class="exp_icon" src="../../../static/room/icon_jingyan.png"></image>
+        <view>经验 +{{myinfo.exp}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="answer_detail">
+    <image class="yes" src="../../../static/room/icon_dui.png"></image>
+    <view>{{myinfo.yes}}题</view>
+    <image class="no" src="../../../static/room/icon_cuo.png"></image>
+    <view>{{myinfo.no}}题</view>
+    <view style="margin-left:30rpx">超过了{{num}}%的答题者</view>
+  </view>
+</view>
+<view class="list" style="margin-top:20rpx;">
+  <view class="item" wx:for="{{pai}}">
+    <view class="ranking_num">{{index + 1}}</view>
+    <image class="item_face" src="{{item.avatarUrl}}"></image>
+    <view class="item_main">
+      <view class="name">{{item.nickName}}</view>
+      <view class="score" style="color:#999999">{{item.jifen}}</view>
+    </view>
+    <view class="money">
+      获得：
+      <text style="color:#e17642">￥{{item.money}}</text>
+    </view>
+  </view>
+</view>
+<view class="box" wx:if="{{close_box}}">
+  <view class="box_container">
+    <image class="box_bg" src="../../../static/room/bg_tu1.png"></image>
+    <view class="box_detail">
+      <image class="obx_face" src="{{myinfo.avatarUrl}}"></image>
+      <view class="reward_zh">恭喜你获得如下奖励</view>
+      <view class="box_reward_container">
+        <view class="reward_bg">
+          <image class="hb_icon" src="../../../static/room/icon_hongbao.png"></image>
+          <view class="box_reward_money">
+            <view>现金奖励</view>
+            <view>￥{{myinfo.money}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="reward_exp_container">
+        <view class="reward_exp">
+          <view class="box_exp_container" style="margin-bottom:10rpx">
+            <view>经验+{{myinfo.exp}}</view>
+          </view>
+          <view class="box_exp_container" style="font-size:28rpx;color:#f94949;padding:20rpx;">
+            <view class="get_double">
+              <view>领双倍经验</view>
+              <view>+{{myinfo.exp * 2}}</view>
+            </view>
+            <button open-type="share" class="get_double_btn" wx:if="{{isl}}" style="font-size:28rpx;color:#f94949;">
+              领取
+            </button>
+            <view class="get_double_btn" wx:if="{{!isl}}">已领</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <image class="close_img" src="../../../static/room/icon_guanbi.png" bindtap="close_box"></image>
+  </view>
+</view>

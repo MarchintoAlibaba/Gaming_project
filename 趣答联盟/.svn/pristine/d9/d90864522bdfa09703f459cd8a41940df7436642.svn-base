@@ -1,0 +1,218 @@
+.top_bg{
+  width: 100%;
+  height: 580rpx;
+}
+.my_sorce_container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.face{
+  width: 120rpx;
+  height: 120rpx;
+  border: 3rpx solid #43078b;
+  border-radius: 50%;
+  position: relative;
+  margin: 30rpx 315rpx;
+}
+.grade{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  line-height: 40rpx;
+  text-align: center;
+  color: #42078a;
+  font-size: 24rpx;
+}
+.face_img{
+  width: 117rpx;
+  height: 117rpx;
+  border-radius: 50%;
+}
+.reward{
+  width: 400rpx;
+  border-radius: 20rpx;
+  margin-left: 150rpx;
+  background: #fff;
+  padding: 10rpx;
+}
+.reward_container{
+  border-radius: 20rpx;
+  border: 1rpx dashed #501a93;
+  padding: 30rpx 0 10rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+}
+.money_icon{
+  width: 30rpx;
+  height: 46rpx;
+  margin-right: 20rpx;
+}
+.exp_icon{
+  width: 30rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+}
+.reward_money{
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yes{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}
+.no{
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0 20rpx 0 30rpx;
+}
+.answer_detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 40rpx;
+}
+.item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  padding: 5rpx 0;
+  height: 90rpx;
+  font-size: 26rpx;
+}
+.ranking_num{
+  height: 90rpx;
+  width: 90rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 90rpx;
+  text-align: center; 
+}
+.item_face{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.item_main{
+  width: 340rpx;
+}
+.box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6)
+}
+.box_container{
+  position: relative;
+  width: 80%;
+  height: 800rpx;
+  top: 150rpx;
+  left: 10%;
+}
+.box_bg{
+  width: 100%;
+  height: 100%;
+}
+.box_detail{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.obx_face{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+  margin: 20rpx 0;
+}
+.reward_zh{
+  font-size: 32rpx;
+  color: #ffe985;
+  text-align: center;
+}
+.box_reward_container{
+  margin: 30rpx 0;
+  width: 380rpx;
+  border: 2rpx dashed #daa6f8;
+  border-radius: 20rpx;
+}
+.reward_bg{
+  background: #f8cb31;
+  width: 340rpx;
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20rpx;
+  padding: 20rpx 0; 
+}
+.box_reward_money{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50rpx;
+  font-size: 24rpx;
+  color: #f95353;
+}
+.hb_icon{
+  width: 45rpx;
+  height: 65rpx;
+  margin-left: 50rpx;
+}
+.close_img{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -80rpx;
+  left: 270rpx
+}
+.reward_exp_container{
+  width: 400rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.reward_exp{
+  width: 340rpx;
+  padding: 30rpx 20rpx; 
+  margin: 10rpx;
+  border: 2rpx dashed #501a93;
+  border-radius: 20rpx;
+}
+.box_exp_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: #f8cb31;
+  border-radius: 20rpx;
+}
+.get_double_btn{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 2rpx dashed #fff;
+  line-height: 80rpx;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+page{
+  letter-spacing: 1rpx
+}
+button{
+  padding: 0;
+  margin: 0;
+  background: rgba(0,0,0,0);
+  line-height: 1;
+  overflow: auto;
+}
+button::after{
+  border: 0;
+  overflow: auto;
+}
+.button-hover{
+  background: rgba(0,0,0,0)
+}

@@ -1,0 +1,95 @@
+<image class="main_bg" src="{{main_bg}}"></image>
+<view class="top">
+  <view class="top_left" bindtap="show_box">
+    <image class="top_left_bg" src="../../../static/index/top_left.png"></image>
+    <view class="top_left_zh">规则</view>
+  </view>
+</view>
+<view class="main">
+  <image class="main_1" src="../../../static/index/hb_3.png"></image>
+  <image class="main_2" src="../../../static/index/hb_1.png"></image>
+  <image class="main_3" src="../../../static/index/v3.png"></image>
+  <image class="open open_annimation" src="../../../static/index/kai.png" bindtap="to_kai"></image>
+</view>
+<view class="index_1">
+  <image class="index_1_bg" src="../../../static/index/index_1_bg.png"></image>
+  <view class="index_1_zh">每日10点，最高10元现金等你来领!</view>
+</view>
+<view class="index_2">
+  <view class="index_2_top">红包派对已经开始！邀请新人立刻领奖金</view>
+  <button open-type="share">
+    <view class="index_2_main" wx:if="{{frecords.length == 0}}">
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+    </view>
+    <view class="index_2_main" wx:if="{{frecords.length == 1}}">
+      <image class="index_2_img" wx:for="{{frecords}}" src="{{item.avatarUrl}}"></image>
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+    </view>
+    <view class="index_2_main" wx:if="{{frecords.length == 2}}">
+      <image class="index_2_img" wx:for="{{frecords}}" src="{{item.avatarUrl}}"></image>
+      <image class="index_2_img" src="../../../static/index/touxiang.png"></image>
+    </view>
+    <view class="index_2_main" wx:if="{{frecords.length == 3}}">
+      <image class="index_2_img" wx:for="{{frecords}}" src="{{item.avatarUrl}}"></image>
+    </view>
+  </button>
+  <button open-type="share">
+    <image class="index_2_btn" src="../../../static/index/mshang.png"></image>
+  </button>
+</view>
+<view class="money_rank">
+  <image class="money_rank_bg" src="../../../static/index/titie.png"></image>
+  <view class="money_rank_zh">财富榜</view>
+</view>
+<view class="list">
+  <view class="liet_item" wx:for="{{hbs}}">
+    {{item.num <= 1 ? "恭喜，":""}}
+    {{item.num > 1 && item.num <= 5 ? "厉害，":""}}
+    {{item.num > 5 ? "太幸运了，":""}}
+    <text wx:if="{{item.num <= 5}}">{{item.nickname}}</text>{{item.num <= 1 ? " 抢到":""}}{{item.num > 1 && item.num <= 5 ? " 获得":""}}
+    <text wx:if="{{item.num <= 5}}">{{item.num}}</text>{{item.num <= 5 ? " 元红包":""}}
+    <text wx:if="{{item.num > 5}}">{{item.num}}</text>{{item.num > 5 ? " 元的大红包被":""}}
+    <text wx:if="{{item.num > 5}}">{{item.nickname}}</text>{{item.num > 5 ? " 带走":""}}
+  </view>
+</view>
+<view class="bottom">
+  <view class="bottom_container">
+    <image class="bottom_img" src="../../../static/index/1p.png" bindtap="to_play"></image>
+    <image class="bottom_img" src="../../../static/index/2p.png" bindtap="to_answe"></image>
+    <image class="bottom_img" src="../../../static/index/3p.png" bindtap="to_shre"></image>
+  </view>
+  <view class="bottom_title">-继续领钱-</view>
+</view>
+<view class="box" wx:if="{{show_box}}">
+  <view class="box_mian">
+    <view class="item" style='width:100%;text-align:center;font-size:40rpx;color:gold;'>规则说明</view>
+    <view class="item">1，邀请3位新用户即可获得开枪红包资格</view>
+    <view class="item">2，每天10点红包开枪</view>
+    <view class="item">3，每人每天可领取1次红包</view>
+    <view class="item">4，红包数量有限，领完即止</view>
+    <view class="item">5，邀请的好友仅当天有效</view>
+    <view class="item">6，所抢红包金额自动存入余额钱包中，可提现</view>
+  </view>
+  <image class="hb_bg" src="../../../static/index/hb.png" style='height:260px;'></image>
+  <image class="close" src="../../../static/room/icon_guanbi.png" bindtap="close_box"></image>
+</view>
+<view style='position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.6);z-index: 1000' wx:if="{{show_alert_box}}">
+  <image style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 500rpx;' src="/static/sign_in/V1.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 350rpx;width: 70%;height: 180rpx;line-height:180rpx;text-align:center;color:white;font-weight:600;'>
+    {{alert_title}}
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:180rpx;text-align:center;'>
+    已存入您的账户
+  </view>
+  <view style='position: absolute;z-index: 1001;left: 15%;top: 530rpx;width: 70%;height: 320rpx;line-height:260rpx;text-align:center;font-size:24rpx;color:blueviolet;'>
+    （可在零钱收人查看）
+  </view>
+  <image style="position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;" src="/static/sign_in/btn_di2.png"></image>
+  <view style='position: absolute;z-index: 1001;left: 25%;top: 730rpx;width: 50%;height: 70rpx;line-height:70rpx;text-align:center;font-size:30rpx;color:white;font-weight:600;' bindtap="close_alert_box">
+    我知道了
+  </view>
+  <image style="width: 40rpx;height: 40rpx;position: absolute;top: 370rpx;right:18%;z-index: 1001" src="/static/sign_in/alert_close.png" bindtap="close_alert_box"></image>
+</view>
